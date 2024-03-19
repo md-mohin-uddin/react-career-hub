@@ -1,4 +1,7 @@
 import { CiLocationOn } from "react-icons/ci";
+import { AiOutlineDollar } from "react-icons/ai";
+import { Link } from "react-router-dom";
+
 const Job = ({ job }) => {
   const {
     id,
@@ -26,9 +29,20 @@ const Job = ({ job }) => {
             {job_type}
           </button>
         </div>
-        <CiLocationOn />
+        <div className="mt-4 flex ">
+          <h2 className="flex mr-4">
+            <CiLocationOn className="text-2xl mr-2"></CiLocationOn>
+            {location}
+          </h2>
+          <h2 className="flex">
+            <AiOutlineDollar className="text-2xl mr-2"></AiOutlineDollar>
+            {salary}
+          </h2>
+        </div>
         <div className="card-actions ">
-          <button className="btn btn-primary">View Details</button>
+          <Link to={`/job/${id}`}>
+            <button className="btn btn-primary">View Details</button>
+          </Link>
         </div>
       </div>
     </div>
