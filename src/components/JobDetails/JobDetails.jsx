@@ -1,9 +1,12 @@
 import { useLoaderData, useParams } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { AiOutlineDollar } from "react-icons/ai";
 import { PiSubtitlesFill } from "react-icons/pi";
 import { CiPhone } from "react-icons/ci";
 import { HiOutlineMail } from "react-icons/hi";
 import { CiLocationOn } from "react-icons/ci";
+import { saveJobApplication } from "../utility/localstorage";
 
 const JobDetails = () => {
   const jobs = useLoaderData();
@@ -84,7 +87,7 @@ const JobDetails = () => {
               {contact_information.email}
             </h2>
             <h2 className="flex">
-              <CiLocationOn className="text-2xl mr-2" />
+              <CiLocationOn className="text-3xl mr-2" />
               <b>Address:</b>
               {contact_information.address}
             </h2>
@@ -93,6 +96,7 @@ const JobDetails = () => {
             <button onClick={handleApplyJob} className="btn btn-primary w-full">
               Apply Now
             </button>
+            <ToastContainer />
           </div>
         </div>
       </div>
