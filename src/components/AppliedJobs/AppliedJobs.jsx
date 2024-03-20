@@ -63,7 +63,7 @@ const AppliedJobs = () => {
       <ul>
         {displayJobs.map((job) => (
           <div key={job.id} className="py-2">
-            <div className="flex">
+            <div className="flex border p-4 justify-center items-center">
               <div className="grid gap-1 md:grid-cols-4">
                 <img className="w-1/2" src={job.logo} alt="" />
                 <div>
@@ -89,12 +89,10 @@ const AppliedJobs = () => {
                   </div>
                 </div>
               </div>
-              <div className="text-right">
-                <Link to={`/job/${job.id}`}>
-                  {" "}
-                  <button className="btn btn-primary">View Jobs</button>
-                </Link>
-              </div>
+              <Link to={`/job/${job.id}`} className="text-end">
+                {" "}
+                <button className="btn btn-primary">View Jobs</button>
+              </Link>
             </div>
           </div>
         ))}
