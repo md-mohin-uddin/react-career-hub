@@ -1,28 +1,28 @@
 [
     {
         "id":1,
-        "logo":"https://i.ibb.co/NyW6vSW/accounts-1.png",
+        "logo":"https://cdn-icons-png.flaticon.com/512/1570/1570887.png",
         "category_name":"Account & Finance",
         "availability":"300 Jobs Available"
 
     },
     {
         "id":2,
-        "logo":"https://i.ibb.co/PC8JwL3/chip-1.png",
+        "logo":"https://cdn-icons-png.flaticon.com/512/1875/1875720.png",
         "category_name":"Creative Design",
         "availability":"100+ Jobs Available"
 
     },
     {
         "id":3,
-        "logo":"https://i.ibb.co/H4f5ZCp/Group-13.png",
+        "logo":"https://cdn3.iconfinder.com/data/icons/black-friday-5-cut-line/468/21-promotion-512.png",
         "category_name":"Marketing & Sales",
         "availability":"150 Jobs Available"
 
     },
     {
         "id":4,
-        "logo":"https://i.ibb.co/72841P4/social-media-1.png",
+        "logo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ33XWRuQh8GEqllNyPJx87aR2Aq7QXpSPvK_QHxoaP5w&s",
         "category_name":"Engineering Job",
         "availability":"224 Jobs Available"
 

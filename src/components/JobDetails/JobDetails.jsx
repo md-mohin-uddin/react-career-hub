@@ -35,8 +35,8 @@ const JobDetails = () => {
         <title>Job Details: {id}</title>
       </Helmet>
       <h2>Job Details of : {id}</h2>
-      <div className="grid gap-4 md:grid-cols-4">
-        <div className="border md:col-span-3">
+      <div className="grid gap-2 md:grid-cols-4">
+        <div className="border rounded md:col-span-3 p-2">
           <h2>
             <b>Job Description</b>: {job_description}
           </h2>
@@ -53,7 +53,7 @@ const JobDetails = () => {
             {experiences}
           </h2>
         </div>
-        <div className="border md:col-span-1">
+        <div className="border rounded md:col-span-1 p-1">
           <div>
             <h1 className="text-2xl py-2">
               <b>Job Details</b>

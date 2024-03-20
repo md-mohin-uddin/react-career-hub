@@ -8,6 +8,7 @@ import AppliedJobs from "./components/AppliedJobs/AppliedJobs";
 import ErrorPage from "./components/ErrorPage/ErrorPage";
 import JobDetails from "./components/JobDetails/JobDetails";
 import { HelmetProvider } from "react-helmet-async";
+import Jobs from "./components/Jobs/Jobs";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,11 @@ const router = createBrowserRouter([
       {
         path: "/applied",
         element: <AppliedJobs></AppliedJobs>,
+        loader: () => fetch("../jobs.json"),
+      },
+      {
+        path: "/jobs",
+        element: <Jobs></Jobs>,
         loader: () => fetch("../jobs.json"),
       },
       {

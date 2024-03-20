@@ -12,14 +12,16 @@ const FeaturedJobs = () => {
   }, []);
   return (
     <div>
-      <div className="text-center">
-        <h2 className="text-5xl">Featured Jobs: {jobs.length}</h2>
-        <p>
+      <div className="text-center pb-6">
+        <h2 className="text-5xl text-center font-semibold my-6">
+          Featured Jobs
+        </h2>
+        <p className="text-base">
           Explore thousands of job opportunities with all the information you
           need. Its your future
         </p>
       </div>
-      <div className="grid grid-cols-2 gap-6 mx-auto">
+      <div className="grid grid-cols-2 gap-4 mx-auto">
         {jobs.slice(0, dataLength).map((job) => (
           <Job key={job.id} job={job}></Job>
         ))}
@@ -27,7 +29,7 @@ const FeaturedJobs = () => {
       <div className={dataLength === jobs.length && "hidden"}>
         <button
           onClick={() => setDataLength(jobs.length)}
-          className="btn btn-primary"
+          className="btn btn-primary my-4"
         >
           Show All Jobs
         </button>

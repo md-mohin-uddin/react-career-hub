@@ -1,7 +1,7 @@
 import myImage from "../../assets/images/user.png";
 const Banner = () => {
   return (
-    <div className="flex">
+    <div className="flex my-10">
       <div className="md:col-span-6 mt-4 ">
         <h2 className="text-7xl text-[#1A1919]">
           One Step <br /> Closer To Your <br />{" "}
