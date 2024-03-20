@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import { getStoredJobApplication } from "../utility/localstorage";
 import { Helmet } from "react-helmet-async";
 import { CiLocationOn } from "react-icons/ci";
@@ -90,7 +90,10 @@ const AppliedJobs = () => {
                 </div>
               </div>
               <div className="text-right">
-                <button className="btn btn-primary">View Jobs</button>
+                <Link to={`/job/${job.id}`}>
+                  {" "}
+                  <button className="btn btn-primary">View Jobs</button>
+                </Link>
               </div>
             </div>
           </div>
