@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { getStoredJobApplication } from "../utility/localstorage";
 import { Helmet } from "react-helmet-async";
+import { CiLocationOn } from "react-icons/ci";
+import { AiOutlineDollar } from "react-icons/ai";
 
 const AppliedJobs = () => {
   const jobs = useLoaderData();
@@ -60,14 +62,38 @@ const AppliedJobs = () => {
       </details>
       <ul>
         {displayJobs.map((job) => (
-          <li key={job.id}>
-            <span>
-              <b>
-                {" "}
-                {job.job_title} {job.company_name}: {job.remote_or_onsite}{" "}
-              </b>
-            </span>
-          </li>
+          <div key={job.id} className="py-2">
+            <div className="flex">
+              <div className="grid gap-1 md:grid-cols-4">
+                <img className="w-1/2" src={job.logo} alt="" />
+                <div>
+                  <b>{job.job_title}</b> <br />
+                  {job.company_name}
+                  <div>
+                    <button className="px-5 py-2 font-extrabold border rounded border-[#7E90FE] mr-4 text-[#7E90FE]">
+                      {job.remote_or_onsite}
+                    </button>
+                    <button className="px-5 py-2 font-extrabold border rounded border-[#7E90FE] mr-4 text-[#7E90FE]">
+                      {job.job_type}
+                    </button>
+                  </div>
+                  <div className="mt-4 flex ">
+                    <h2 className="flex mr-4">
+                      <CiLocationOn className="text-2xl mr-2"></CiLocationOn>
+                      {job.location}
+                    </h2>
+                    <h2 className="flex">
+                      <AiOutlineDollar className="text-2xl mr-2"></AiOutlineDollar>
+                      {job.salary}
+                    </h2>
+                  </div>
+                </div>
+              </div>
+              <div className="text-right">
+                <button className="btn btn-primary">View Jobs</button>
+              </div>
+            </div>
+          </div>
         ))}
       </ul>
     </div>
