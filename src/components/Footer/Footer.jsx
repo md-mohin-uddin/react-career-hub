@@ -1,9 +1,17 @@
-import React from "react";
+import iconImg from "../../assets/icons/social.png";
 
 const Footer = () => {
   return (
     <footer className=" p-10 bg-base-200 text-base-content">
       <div className="footer max-w-6xl mx-auto">
+        <nav>
+          <h1 className="text-2xl footer-title">Career Hub</h1>
+          <p>
+            There are many variations of passages <br /> of Lorem Ipsum , but
+            the majority have <br /> suffered alteration in some form.
+          </p>
+          <img src={iconImg} alt="" />
+        </nav>
         <nav>
           <h6 className="footer-title">Services</h6>
           <a className="link link-hover">Branding</a>
