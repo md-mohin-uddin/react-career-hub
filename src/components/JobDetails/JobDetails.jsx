@@ -7,6 +7,7 @@ import { CiPhone } from "react-icons/ci";
 import { HiOutlineMail } from "react-icons/hi";
 import { CiLocationOn } from "react-icons/ci";
 import { saveJobApplication } from "../utility/localstorage";
+import { Helmet } from "react-helmet-async";
 
 const JobDetails = () => {
   const jobs = useLoaderData();
@@ -30,6 +31,9 @@ const JobDetails = () => {
   };
   return (
     <div className="py-4">
+      <Helmet>
+        <title>Job Details: {id}</title>
+      </Helmet>
       <h2>Job Details of : {id}</h2>
       <div className="grid gap-4 md:grid-cols-4">
         <div className="border md:col-span-3">
