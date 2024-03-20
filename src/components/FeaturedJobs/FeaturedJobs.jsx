@@ -21,10 +21,12 @@ const FeaturedJobs = () => {
           need. Its your future
         </p>
       </div>
-      <div className="grid grid-cols-2 gap-4 mx-auto">
-        {jobs.slice(0, dataLength).map((job) => (
-          <Job key={job.id} job={job}></Job>
-        ))}
+      <div className="flex justify-center items-center ">
+        <div className="grid grid-cols-2 gap-4 mx-auto mb-4">
+          {jobs.slice(0, dataLength).map((job) => (
+            <Job key={job.id} job={job}></Job>
+          ))}
+        </div>
       </div>
       <div className={dataLength === jobs.length && "hidden"}>
         <button
