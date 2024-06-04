@@ -4,18 +4,18 @@ import {
 } from "firebase/auth";
 import auth from "../firebase/firebase.config";
 import { useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [signInError, setSignInError] = useState("");
   const [success, setSuccess] = useState("");
+  const navigate = useNavigate();
   const emailRef = useRef(null);
 
   const handleLogin = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
-    console.log(email, password);
 
     // reset error and success
     setSignInError("");
@@ -24,8 +24,13 @@ const Login = () => {
     // sign in
     signInWithEmailAndPassword(auth, email, password)
       .then((result) => {
-        console.log(result.user);
+        const token = result.user.accessToken;
+        localStorage.setItem("token", JSON.stringify(token));
         setSuccess("Login Successfully");
+        if (result.user) {
+          navigate("/applied");
+        }
+
         if (result.user.emailVerified) {
           setSuccess("User Logged in Successfully.");
         } else {
@@ -71,8 +76,8 @@ const Login = () => {
             a id nisi.
           </p>
         </div>
-        <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-          <form onSubmit={handleLogin} className="card-body">
+        <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100 card-body">
+          <form onSubmit={handleLogin} className="">
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Email</span>

@@ -2,7 +2,9 @@ const Category = ({ category }) => {
   const { logo, category_name, availability } = category;
   return (
     <div>
-      <img className="w-1/4 py-2" src={logo} alt="" />
+      <div className="flex justify-center items-center">
+        <img className="w-1/4 py-2" src={logo} alt="" />
+      </div>
       <h2 className="text=[#474747]">
         <b>{category_name}</b>
       </h2>

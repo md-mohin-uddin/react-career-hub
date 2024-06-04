@@ -22,19 +22,21 @@ const FeaturedJobs = () => {
         </p>
       </div>
       <div className="flex justify-center items-center ">
-        <div className="grid grid-cols-2 gap-4 mx-auto mb-4">
+        <div className="grid sm:grid-cols-2 gap-4 mx-auto mb-4">
           {jobs.slice(0, dataLength).map((job) => (
             <Job key={job.id} job={job}></Job>
           ))}
         </div>
       </div>
-      <div className={dataLength === jobs.length && "hidden"}>
-        <button
-          onClick={() => setDataLength(jobs.length)}
-          className="btn btn-primary my-4"
-        >
-          Show All Jobs
-        </button>
+      <div className="text-center">
+        <div className={dataLength === jobs.length && "hidden"}>
+          <button
+            onClick={() => setDataLength(jobs.length)}
+            className="btn btn-primary my-4"
+          >
+            Show All Jobs
+          </button>
+        </div>
       </div>
     </div>
   );

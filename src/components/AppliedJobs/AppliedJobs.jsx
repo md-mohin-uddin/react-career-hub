@@ -37,7 +37,6 @@ const AppliedJobs = () => {
       }
       setAppliedJobs(jobsApplied);
       setDisplayJobs(jobsApplied);
-      console.log(jobs, storedJobsIds, jobsApplied);
     }
   }, [jobs]);
   return (

@@ -80,7 +80,7 @@ const Register = () => {
           required
         />
         <br />
-        <div className="mb-4 relative border">
+        <div className="mb-4 relative ">
           <input
             className="w-full py-2 px-4"
             name="password"

@@ -43,10 +43,12 @@ const Jobs = () => {
                   {job.salary}
                 </h2>
               </div>
-              <div className="card-actions ">
-                <Link to={`/job/${job.id}`}>
-                  <button className="btn btn-primary">View Details</button>
-                </Link>
+              <div className="text-center">
+                <div className="card-actions">
+                  <Link to={`/job/${job.id}`}>
+                    <button className="btn btn-primary">View Details</button>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
